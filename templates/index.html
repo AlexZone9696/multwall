@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Generator</title>
+    <script>
+        async function generateWallets() {
+            const response = await fetch('/generate_wallets');
+            const data = await response.json();
+            // Форматируем JSON с отступами
+            document.getElementById('jsonResponse').innerText = JSON.stringify(data, null, 2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Wallet Generator</h1>
+    <button onclick="generateWallets()">Generate Wallets</button>
+    <pre id="jsonResponse" style="white-space: pre-wrap; word-wrap: break-word;"></pre>
+</body>
+</html>
