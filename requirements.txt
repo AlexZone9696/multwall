@@ -1,0 +1,5 @@
+Flask
+bip-utils
+tronpy
+eth-account
+mnemonic
